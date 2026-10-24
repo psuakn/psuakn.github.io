@@ -127,6 +127,24 @@ The compiled, production-ready static assets will be located in the `dist/` dire
 
 ---
 
+## 🔍 Google Search Optimization & Ranking #1 for "Arun Kumar Nandi"
+
+This repository is built with production-grade academic SEO optimizations to help **Prof. Arun Kumar Nandi** rank at the top of Google search results:
+
+1. **Schema.org Knowledge Graph (`Person` & `WebSite`)**: Embedded JSON-LD structured data linking Prof. Arun Kumar Nandi's name, affiliations (IACS Kolkata, Florida State University), awards (FASc, FRSC, MRSI), and identifiers.
+2. **Title & Meta Tag Keyword Targeting**: Front-loaded with *"Prof. Arun Kumar Nandi | Emeritus Scientist, CSIR | IACS Kolkata"* and exact keyword variants (`Arun Kumar Nandi`, `Arun K Nandi`, `A. K. Nandi`, `psuakn`).
+3. **Robots.txt & XML Sitemap**: `public/robots.txt` and `public/sitemap.xml` automatically instruct Googlebot to crawl and index all section anchors.
+4. **Google Scholar & Academic Meta Tags**: Includes `<meta name="citation_author">` tags for scholarly indexing.
+
+### How to Get Indexed in 24 Hours on Google:
+1. **Google Search Console**: Visit [https://search.google.com/search-console](https://search.google.com/search-console).
+2. Add your property: `https://psuakn.github.io/` (URL prefix method).
+3. Under **Sitemaps**, submit: `https://psuakn.github.io/sitemap.xml`.
+4. Click **URL Inspection** → enter `https://psuakn.github.io/` → click **"Request Indexing"**.
+5. **Backlink Strategy**: Add `https://psuakn.github.io` as your official homepage URL on your Google Scholar profile, ORCID profile, and ResearchGate profile. Backlinks from these trusted academic domains signal supreme authority to Google's ranking algorithms.
+
+---
+
 ## 📜 License & Copyright
 
 © 2026 Prof. Arun Kumar Nandi. Indian Association for the Cultivation of Science (IACS). All rights reserved.
