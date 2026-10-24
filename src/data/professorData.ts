@@ -232,7 +232,7 @@ export const RESEARCH_THRUSTS = [
     id: 'thrust-6',
     title: 'Polymer Crystallization & Thermodynamics of Blends',
     subtitle: 'Cocrystallization Kinetics, Regioregularity & Kinetic Immiscibility',
-    image: 'https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1576086213369-97a306d36557?auto=format&fit=crop&w=800&q=80',
     description: 'Systematic exploration of regioregularity, chain defects, and crystallization kinetics in poly(3-alkyl thiophenes) and fluoropolymer blends. Discovered the fundamental principle of kinetic immiscibility in polymer-polymer blends and co-crystal formation with controlled chain extension.',
     tags: ['Crystallization Kinetics', 'Regioregular P3AT', 'Polymer Miscibility', 'Defect Thermodynamics', 'Mandelkern Legacy'],
     keyPaper: 'Macromolecules (1985, 1995, 2001, 2003) & Polymer (1994, 1998)',
