@@ -16,25 +16,34 @@ import { HonorsSection } from './components/HonorsSection';
 import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
 
-export default function App() {
-  const [isDark, setIsDark] = useState<boolean>(() => {
-    if (typeof window !== 'undefined') {
-      const stored = localStorage.getItem('akn_portfolio_theme');
+const getInitialTheme = (): boolean => {
+  try {
+    if (typeof window !== 'undefined' && window.localStorage) {
+      const stored = window.localStorage.getItem('akn_portfolio_theme');
       if (stored) return stored === 'dark';
       return window.matchMedia('(prefers-color-scheme: dark)').matches;
     }
-    return false;
-  });
+  } catch {
+    // Ignore iframe security error
+  }
+  return false;
+};
 
+export default function App() {
+  const [isDark, setIsDark] = useState<boolean>(getInitialTheme);
   const [activeSection, setActiveSection] = useState<string>('about');
 
   useEffect(() => {
-    if (isDark) {
-      document.documentElement.classList.add('dark');
-      localStorage.setItem('akn_portfolio_theme', 'dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-      localStorage.setItem('akn_portfolio_theme', 'light');
+    try {
+      if (isDark) {
+        document.documentElement.classList.add('dark');
+        window.localStorage?.setItem('akn_portfolio_theme', 'dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+        window.localStorage?.setItem('akn_portfolio_theme', 'light');
+      }
+    } catch {
+      // Ignore iframe security error
     }
   }, [isDark]);
 

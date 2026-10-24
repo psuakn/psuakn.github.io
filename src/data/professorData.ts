@@ -55,10 +55,15 @@ export interface AwardItem {
   category: 'Fellowship' | 'Society Award' | 'National Recognition' | 'Editorial & Service';
 }
 
+const getBaseUrl = () => {
+  const base = typeof import.meta !== 'undefined' && import.meta.env?.BASE_URL ? import.meta.env.BASE_URL : '/';
+  return base.endsWith('/') ? base : `${base}/`;
+};
+
 export const PROFESSOR_INFO = {
   name: 'Prof. Arun Kumar Nandi',
   fullName: 'Prof. Arun Kumar Nandi, FASc., FRSC',
-  portraitUrl: './assets/aistudio/WhatsApp_Image_2026-10-24_at_9.44.42_PM_4bd7d769.jpg',
+  portraitUrl: `${getBaseUrl()}assets/aistudio/WhatsApp_Image_2026-10-24_at_9.44.42_PM_4bd7d769.jpg`,
   designation: 'Emeritus Scientist, CSIR',
   formerRole: 'Senior Professor & Head (Former)',
   unit: 'Polymer Science Unit, School of Materials Science',
