@@ -20,13 +20,13 @@ const getInitialTheme = (): boolean => {
   try {
     if (typeof window !== 'undefined' && window.localStorage) {
       const stored = window.localStorage.getItem('akn_portfolio_theme');
-      if (stored) return stored === 'dark';
-      return window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (stored === 'dark') return true;
+      if (stored === 'light') return false;
     }
   } catch {
     // Ignore iframe security error
   }
-  return false;
+  return false; // Default to white theme
 };
 
 export default function App() {
