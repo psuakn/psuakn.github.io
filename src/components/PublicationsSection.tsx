@@ -7,8 +7,7 @@ import {
   Quote, 
   Sparkles, 
   RotateCcw, 
-  ChevronLeft, 
-  ChevronRight, 
+  ArrowUp, 
   Bookmark, 
   Layers, 
   Check, 
@@ -33,8 +32,6 @@ export const PublicationsSection: React.FC = () => {
   const [categoryFilter, setCategoryFilter] = useState('all');
   const [publisherFilter, setPublisherFilter] = useState('all');
   const [decadeFilter, setDecadeFilter] = useState('all');
-  const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 12;
 
   const [selectedForCitation, setSelectedForCitation] = useState<Publication | null>(null);
 
@@ -74,19 +71,20 @@ export const PublicationsSection: React.FC = () => {
     );
   }, [searchQuery, decadeFilter, publisherFilter, categoryFilter]);
 
-  // Pagination calculation
-  const totalPages = Math.ceil(filteredPublications.length / itemsPerPage) || 1;
-  const paginatedPubs = useMemo(() => {
-    const start = (currentPage - 1) * itemsPerPage;
-    return filteredPublications.slice(start, start + itemsPerPage);
-  }, [filteredPublications, currentPage]);
-
   const handleResetFilters = () => {
     setSearchQuery('');
     setCategoryFilter('all');
     setPublisherFilter('all');
     setDecadeFilter('all');
-    setCurrentPage(1);
+  };
+
+  const scrollToPublicationsTop = () => {
+    const el = document.getElementById('publications-list');
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
   };
 
   return (
@@ -166,7 +164,7 @@ export const PublicationsSection: React.FC = () => {
         {/* View Switcher: Journal Articles / Books & Chapters / Popular Science */}
         <div className="flex border-b border-slate-200 dark:border-slate-800 mb-6 space-x-2 sm:space-x-4">
           <button
-            onClick={() => { setActiveTab('journals'); setCurrentPage(1); }}
+            onClick={() => setActiveTab('journals')}
             className={`pb-3 px-3 sm:px-4 text-xs sm:text-sm font-medium border-b-2 flex items-center gap-2 transition-colors ${
               activeTab === 'journals'
                 ? 'border-indigo-600 text-indigo-600 dark:border-indigo-400 dark:text-indigo-400 font-semibold'
@@ -178,7 +176,7 @@ export const PublicationsSection: React.FC = () => {
           </button>
 
           <button
-            onClick={() => { setActiveTab('books'); }}
+            onClick={() => setActiveTab('books')}
             className={`pb-3 px-3 sm:px-4 text-xs sm:text-sm font-medium border-b-2 flex items-center gap-2 transition-colors ${
               activeTab === 'books'
                 ? 'border-indigo-600 text-indigo-600 dark:border-indigo-400 dark:text-indigo-400 font-semibold'
@@ -190,7 +188,7 @@ export const PublicationsSection: React.FC = () => {
           </button>
 
           <button
-            onClick={() => { setActiveTab('popular'); }}
+            onClick={() => setActiveTab('popular')}
             className={`pb-3 px-3 sm:px-4 text-xs sm:text-sm font-medium border-b-2 flex items-center gap-2 transition-colors ${
               activeTab === 'popular'
                 ? 'border-indigo-600 text-indigo-600 dark:border-indigo-400 dark:text-indigo-400 font-semibold'
@@ -214,7 +212,7 @@ export const PublicationsSection: React.FC = () => {
                   <input
                     type="text"
                     value={searchQuery}
-                    onChange={(e) => { setSearchQuery(e.target.value); setCurrentPage(1); }}
+                    onChange={(e) => setSearchQuery(e.target.value)}
                     placeholder="Search by title, co-author (e.g. Basak, Chatterjee, Mandelkern), journal, or keyword..."
                     className="w-full pl-9 pr-3 py-2 text-xs sm:text-sm bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-lg text-slate-900 dark:text-white placeholder-slate-400 focus:outline-hidden focus:ring-2 focus:ring-indigo-500"
                   />
@@ -234,7 +232,7 @@ export const PublicationsSection: React.FC = () => {
                   <select
                     id="pub-select"
                     value={publisherFilter}
-                    onChange={(e) => { setPublisherFilter(e.target.value); setCurrentPage(1); }}
+                    onChange={(e) => setPublisherFilter(e.target.value)}
                     className="w-full py-2 px-3 text-xs sm:text-sm bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-lg text-slate-900 dark:text-white focus:outline-hidden focus:ring-2 focus:ring-indigo-500"
                   >
                     <option value="all">All Publishers (ACS, RSC, Elsevier...)</option>
@@ -251,7 +249,7 @@ export const PublicationsSection: React.FC = () => {
                   <select
                     id="decade-select"
                     value={decadeFilter}
-                    onChange={(e) => { setDecadeFilter(e.target.value); setCurrentPage(1); }}
+                    onChange={(e) => setDecadeFilter(e.target.value)}
                     className="w-full py-2 px-3 text-xs sm:text-sm bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-lg text-slate-900 dark:text-white focus:outline-hidden focus:ring-2 focus:ring-indigo-500"
                   >
                     {decades.map((d) => (
@@ -270,7 +268,7 @@ export const PublicationsSection: React.FC = () => {
                 {categories.map((cat) => (
                   <button
                     key={cat}
-                    onClick={() => { setCategoryFilter(cat); setCurrentPage(1); }}
+                    onClick={() => setCategoryFilter(cat)}
                     className={`px-2.5 py-1 text-xs rounded-md font-medium transition-colors ${
                       categoryFilter === cat
                         ? 'bg-indigo-600 text-white'
@@ -285,9 +283,9 @@ export const PublicationsSection: React.FC = () => {
               {/* Status and Reset Bar */}
               <div className="flex items-center justify-between text-xs text-slate-500 dark:text-slate-400 pt-1">
                 <span>
-                  Showing <strong>{filteredPublications.length}</strong> of {ALL_PUBLICATIONS.length} publications
+                  Showing all <strong>{filteredPublications.length}</strong> of {ALL_PUBLICATIONS.length} publications (scroll to browse full list)
                   {(searchQuery || categoryFilter !== 'all' || publisherFilter !== 'all' || decadeFilter !== 'all') && (
-                    <span className="ml-1 text-indigo-600 dark:text-indigo-400">(Filtered)</span>
+                    <span className="ml-1 text-indigo-600 dark:text-indigo-400 font-semibold">(Filtered)</span>
                   )}
                 </span>
                 {(searchQuery || categoryFilter !== 'all' || publisherFilter !== 'all' || decadeFilter !== 'all') && (
@@ -303,7 +301,7 @@ export const PublicationsSection: React.FC = () => {
             </div>
 
             {/* Publication List */}
-            {paginatedPubs.length === 0 ? (
+            {filteredPublications.length === 0 ? (
               <div className="p-12 text-center rounded-2xl bg-slate-50 dark:bg-slate-800/40 border border-slate-200 dark:border-slate-800 space-y-3">
                 <p className="text-sm font-semibold text-slate-700 dark:text-slate-300">
                   No publications matched your search criteria.
@@ -319,8 +317,8 @@ export const PublicationsSection: React.FC = () => {
                 </button>
               </div>
             ) : (
-              <div className="space-y-4">
-                {paginatedPubs.map((pub) => (
+              <div id="publications-list" className="space-y-4">
+                {filteredPublications.map((pub) => (
                   <article
                     key={pub.id}
                     className="p-5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 hover:border-slate-300 dark:hover:border-slate-700 hover:shadow-xs transition-all flex flex-col justify-between"
@@ -404,29 +402,21 @@ export const PublicationsSection: React.FC = () => {
               </div>
             )}
 
-            {/* Pagination Controls */}
-            {totalPages > 1 && (
-              <div className="flex items-center justify-between pt-6 border-t border-slate-200 dark:border-slate-800">
-                <button
-                  onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}
-                  disabled={currentPage === 1}
-                  className="inline-flex items-center gap-1 px-3 py-1.5 text-xs font-medium rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 disabled:opacity-40 disabled:cursor-not-allowed hover:bg-slate-50 dark:hover:bg-slate-800"
-                >
-                  <ChevronLeft className="w-4 h-4" />
-                  <span>Previous</span>
-                </button>
-
-                <div className="text-xs text-slate-500 dark:text-slate-400 font-medium">
-                  Page {currentPage} of {totalPages}
+            {/* End of Continuous Stream Banner & Back to Top */}
+            {filteredPublications.length > 0 && (
+              <div className="flex flex-col sm:flex-row items-center justify-between gap-4 p-5 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-800 mt-8 text-xs text-slate-500 dark:text-slate-400">
+                <div className="flex items-center gap-2">
+                  <Check className="w-4 h-4 text-emerald-500 shrink-0" />
+                  <span>
+                    Displaying all <strong>{filteredPublications.length}</strong> peer-reviewed publications.
+                  </span>
                 </div>
-
                 <button
-                  onClick={() => setCurrentPage((p) => Math.min(totalPages, p + 1))}
-                  disabled={currentPage === totalPages}
-                  className="inline-flex items-center gap-1 px-3 py-1.5 text-xs font-medium rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 disabled:opacity-40 disabled:cursor-not-allowed hover:bg-slate-50 dark:hover:bg-slate-800"
+                  onClick={scrollToPublicationsTop}
+                  className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 hover:text-indigo-600 dark:hover:text-indigo-400 hover:border-indigo-300 font-medium transition-colors shadow-2xs"
                 >
-                  <span>Next</span>
-                  <ChevronRight className="w-4 h-4" />
+                  <ArrowUp className="w-3.5 h-3.5" />
+                  <span>Back to Top of Publications</span>
                 </button>
               </div>
             )}
