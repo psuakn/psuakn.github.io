@@ -3,8 +3,8 @@
 [![Deploy to GitHub Pages](https://github.com/psuakn/portfolio/actions/workflows/deploy.yml/badge.svg)](https://github.com/psuakn/portfolio/actions/workflows/deploy.yml)
 [![Website](https://img.shields.io/badge/Website-Live%20on%20GitHub%20Pages-blue)](https://psuakn.github.io)
 [![h-index](https://img.shields.io/badge/h--index-61-success)](https://scholar.google.co.in/citations?user=en_rKaoAAAAJ&hl=en)
-[![Publications](https://img.shields.io/badge/Publications-260%2B-indigo)](https://psuakn.github.io/#publications)
-[![Ph.D. Alumni](https://img.shields.io/badge/Ph.D.%20Alumni-37-purple)](https://psuakn.github.io/#alumni)
+[![Publications](https://img.shields.io/badge/Publications-268-indigo)](https://psuakn.github.io/#publications)
+[![Ph.D. Alumni](https://img.shields.io/badge/Ph.D.%20Alumni-37%20%2B%201%20collab-purple)](https://psuakn.github.io/#alumni)
 
 Official academic portfolio and research group website for **Prof. Arun Kumar Nandi, FASc., FRSC** (Emeritus Scientist, CSIR at the Indian Association for the Cultivation of Science, Kolkata).
 
@@ -17,7 +17,7 @@ Official academic portfolio and research group website for **Prof. Arun Kumar Na
   - Fellow of the Indian Academy of Sciences (FASc, 2009)
   - Fellow of the Royal Society of Chemistry, UK (FRSC, 2014)
   - Fellow of West Bengal Academy of Science and Technology (FWAST, 2006)
-- **Metrics**: 260+ Refereed Articles, **h-index 61**, 37 Ph.D. scholars supervised, 1 RSC textbook, 5 book chapters.
+- **Metrics**: 268 Refereed Articles (91 ACS, 59 RSC, 41 Elsevier, 40 Wiley, 35 Others), **h-index 61**, 37 (+1 collaborative) Ph.D. scholars awarded, 2 RSC reference textbooks, 5 book chapters.
 
 ---
 

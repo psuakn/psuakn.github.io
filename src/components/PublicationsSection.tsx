@@ -127,36 +127,44 @@ export const PublicationsSection: React.FC = () => {
         </div>
 
         {/* Publisher Statistics Summary Bar */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 mb-8">
           <div className="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/80">
             <div className="text-xs font-medium text-slate-500 dark:text-slate-400">ACS Journals</div>
-            <div className="text-xl font-bold font-serif text-slate-900 dark:text-white mt-0.5">85 Articles</div>
-            <div className="text-[11px] text-slate-500 dark:text-slate-400 mt-1">
-              Langmuir (24) · Macromolecules (17) · JPC-B (17) · ACS AMI (9)
+            <div className="text-xl font-bold font-serif text-slate-900 dark:text-white mt-0.5">91 Articles</div>
+            <div className="text-[11px] text-slate-500 dark:text-slate-400 mt-1 leading-tight">
+              Langmuir (27) · Macromolecules (17) · JPC-B (17) · ACS AMI (10) · JPC-C (7)
             </div>
           </div>
 
           <div className="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/80">
             <div className="text-xs font-medium text-slate-500 dark:text-slate-400">RSC Journals</div>
-            <div className="text-xl font-bold font-serif text-slate-900 dark:text-white mt-0.5">58 Articles</div>
-            <div className="text-[11px] text-slate-500 dark:text-slate-400 mt-1">
-              JMCA (14) · Soft Matter (8) · Chem Comm (7) · RSC Adv (8)
+            <div className="text-xl font-bold font-serif text-slate-900 dark:text-white mt-0.5">59 Articles</div>
+            <div className="text-[11px] text-slate-500 dark:text-slate-400 mt-1 leading-tight">
+              JMCA (15) · Soft Matter (8) · JMC (8) · RSC Adv (8) · Chem Comm (7) · PCCP (4)
+            </div>
+          </div>
+
+          <div className="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/80">
+            <div className="text-xs font-medium text-slate-500 dark:text-slate-400">Elsevier Journals</div>
+            <div className="text-xl font-bold font-serif text-slate-900 dark:text-white mt-0.5">41 Articles</div>
+            <div className="text-[11px] text-slate-500 dark:text-slate-400 mt-1 leading-tight">
+              Polymer (20) · Synth. Metals (8) · Carbon (3) · Eur. Polym. J. (3) · JICS (3)
             </div>
           </div>
 
           <div className="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/80">
             <div className="text-xs font-medium text-slate-500 dark:text-slate-400">Wiley Journals</div>
             <div className="text-xl font-bold font-serif text-slate-900 dark:text-white mt-0.5">40 Articles</div>
-            <div className="text-[11px] text-slate-500 dark:text-slate-400 mt-1">
-              J. Polym. Sci. (13) · Macromol. Symp. (13) · Small (1)
+            <div className="text-[11px] text-slate-500 dark:text-slate-400 mt-1 leading-tight">
+              Macromol. Chem. Phys. (13) · J. Polym. Sci. (13) · ChemSelect (3) · Small (1)
             </div>
           </div>
 
-          <div className="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/80">
-            <div className="text-xs font-medium text-slate-500 dark:text-slate-400">Elsevier Journals</div>
-            <div className="text-xl font-bold font-serif text-slate-900 dark:text-white mt-0.5">39 Articles</div>
-            <div className="text-[11px] text-slate-500 dark:text-slate-400 mt-1">
-              Polymer (20) · Carbon (3) · Synth. Metals (6) · Prog. Polym. Sci. (1)
+          <div className="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/80 col-span-2 sm:col-span-1">
+            <div className="text-xs font-medium text-slate-500 dark:text-slate-400">Other Journals</div>
+            <div className="text-xl font-bold font-serif text-slate-900 dark:text-white mt-0.5">35 Articles</div>
+            <div className="text-[11px] text-slate-500 dark:text-slate-400 mt-1 leading-tight">
+              J. Macromol. Sci. (2) · J. Chem. Phys. (1) · Peer-Reviewed Journals (32)
             </div>
           </div>
         </div>
@@ -283,7 +291,7 @@ export const PublicationsSection: React.FC = () => {
               {/* Status and Reset Bar */}
               <div className="flex items-center justify-between text-xs text-slate-500 dark:text-slate-400 pt-1">
                 <span>
-                  Showing all <strong>{filteredPublications.length}</strong> of {ALL_PUBLICATIONS.length} publications (scroll to browse full list)
+                  Showing all <strong>{filteredPublications.length}</strong> of {ALL_PUBLICATIONS.length} publications (numbered #1, #2, #3... newest to earliest)
                   {(searchQuery || categoryFilter !== 'all' || publisherFilter !== 'all' || decadeFilter !== 'all') && (
                     <span className="ml-1 text-indigo-600 dark:text-indigo-400 font-semibold">(Filtered)</span>
                   )}
@@ -408,7 +416,7 @@ export const PublicationsSection: React.FC = () => {
                 <div className="flex items-center gap-2">
                   <Check className="w-4 h-4 text-emerald-500 shrink-0" />
                   <span>
-                    Displaying all <strong>{filteredPublications.length}</strong> peer-reviewed publications.
+                    Displaying all <strong>{filteredPublications.length}</strong> peer-reviewed publications (numbered #1 to #{filteredPublications.length}, newest first).
                   </span>
                 </div>
                 <button
@@ -427,7 +435,7 @@ export const PublicationsSection: React.FC = () => {
         {activeTab === 'books' && (
           <div className="space-y-6">
             <p className="text-xs text-slate-500 dark:text-slate-400">
-              Authored textbook published by the Royal Society of Chemistry and peer-reviewed chapters in international encyclopedias:
+              Authored reference textbooks published by the Royal Society of Chemistry (RSC) and peer-reviewed chapters in international encyclopedias:
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -463,12 +471,12 @@ export const PublicationsSection: React.FC = () => {
                     </p>
                   </div>
 
-                  <div className="pt-3 border-t border-slate-200 dark:border-slate-700/60 flex items-center justify-between text-xs">
+                  <div className="pt-3 border-t border-slate-200 dark:border-slate-700/60 flex flex-wrap items-center justify-between gap-2 text-xs">
                     <span className="font-mono text-[11px] text-slate-500 dark:text-slate-400">
                       {book.publisher}
                     </span>
                     {book.isbnOrDoi && (
-                      <span className="font-mono text-[10px] text-indigo-700 dark:text-indigo-400">
+                      <span className="font-mono text-[10px] text-indigo-700 dark:text-indigo-400 break-all">
                         {book.isbnOrDoi}
                       </span>
                     )}

@@ -31,10 +31,10 @@ export const AlumniSection: React.FC = () => {
               Academic Legacy & Mentorship
             </p>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-slate-900 dark:text-white">
-              Doctoral Alumni Directory ({PHD_ALUMNI.length} Ph.D. Scholars)
+              Doctoral Alumni Directory (37 + 1 Collaborative Ph.D. Scholars)
             </h2>
             <p className="text-sm text-slate-600 dark:text-slate-300 mt-2 leading-relaxed">
-              Prof. Arun Kumar Nandi has supervised 37 doctoral graduates (plus 1 collaborative) who now lead academic departments, research labs, and industrial technology divisions across the USA, Japan, Europe, Israel, and India.
+              Prof. Arun Kumar Nandi has mentored 37 doctoral graduates awarded degrees (plus 1 collaborative Ph.D.) who now lead academic departments, research labs, and industrial technology divisions across the USA, Japan, Europe, Israel, and India.
             </p>
           </div>
 
@@ -42,10 +42,10 @@ export const AlumniSection: React.FC = () => {
           <div className="p-4 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shrink-0">
             <div className="text-xs text-slate-500 dark:text-slate-400">Doctoral Output</div>
             <div className="text-2xl font-serif font-bold text-indigo-600 dark:text-indigo-400">
-              37 Ph.D. Degrees
+              37 (+1) Ph.D. Degrees
             </div>
             <div className="text-[11px] text-slate-500 dark:text-slate-400">
-              Jadavpur University & Calcutta University
+              37 Supervised + 1 Collaborative Awarded
             </div>
           </div>
         </div>

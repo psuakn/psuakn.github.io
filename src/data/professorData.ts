@@ -63,7 +63,7 @@ const getBaseUrl = () => {
 export const PROFESSOR_INFO = {
   name: 'Prof. Arun Kumar Nandi',
   fullName: 'Prof. Arun Kumar Nandi, FASc., FRSC',
-  portraitUrl: `${getBaseUrl()}assets/aistudio/WhatsApp_Image_2026-10-24_at_9.44.42_PM_4bd7d769.jpg`,
+  portraitUrl: `${getBaseUrl()}assets/aistudio/ak_nandi_820358dd.png`,
   designation: 'Emeritus Scientist, CSIR',
   formerRole: 'Senior Professor & Head (Former)',
   unit: 'Polymer Science Unit, School of Materials Science',
@@ -78,7 +78,7 @@ export const PROFESSOR_INFO = {
   scholarUrl: 'https://scholar.google.co.in/citations?user=en_rKaoAAAAJ&hl=en',
   iacsProfileUrl: 'http://iacs.res.in',
   hIndex: 61,
-  totalPublications: 260,
+  totalPublications: 268,
   phdSupervised: 37,
   collaborativePhd: 1,
   totalCitations: '7,000+',
@@ -90,7 +90,7 @@ export const PROFESSOR_INFO = {
     { title: 'FWAST', name: 'West Bengal Academy of Science and Technology', year: '2006' }
   ],
   bioOverview: `Prof. Arun Kumar Nandi, FASc, FRSC, is an internationally acclaimed polymer scientist and Emeritus Scientist (CSIR) at the Indian Association for the Cultivation of Science (IACS), Kolkata. Over four decades of groundbreaking research, Prof. Nandi has pioneered foundational concepts in polymer crystallization, thermoreversible supramolecular gelation, polymer-functionalized graphene, biomolecular hybrids, and organic mixed ion-electron conductors for energy storage and optoelectronics.`,
-  bioDetail: `With over 260 research papers in top-tier journals (including 85 ACS and 58 RSC publications), an h-index of 61, and having mentored 37 Ph.D. scholars who currently hold faculty and scientific leadership posts globally, Prof. Nandi has shaped the trajectory of macromolecular chemistry in India and abroad. His postdoctoral work at Florida State University alongside legendary polymer physicist Prof. Leo Mandelkern established critical insights into polymer equilibrium melting and defect distributions. He later pioneered "nanojacketing" of DNA, smart thixotropic photoluminescent gels, piezoelectric β-PVDF polymorph nanocomposites, and high-efficiency hybrid supercapacitors.`
+  bioDetail: `With over 268 research papers in top-tier journals (including 91 ACS, 59 RSC, 41 Elsevier, and 40 Wiley publications), an h-index of 61, author of two Royal Society of Chemistry reference textbooks on "Polymer Functionalized Graphene" (2021) and "Polymer and Supramolecular Gels" (2024), and having mentored 37 Ph.D. scholars (+1 collaborative) who currently hold faculty and scientific leadership posts globally, Prof. Nandi has shaped the trajectory of macromolecular chemistry in India and abroad. His postdoctoral work at Florida State University alongside legendary polymer physicist Prof. Leo Mandelkern established critical insights into polymer equilibrium melting and defect distributions. He later pioneered "nanojacketing" of DNA, smart thixotropic photoluminescent gels, piezoelectric β-PVDF polymorph nanocomposites, and high-efficiency hybrid supercapacitors.`
 };
 
 export const EDUCATION_LIST = [
@@ -391,6 +391,16 @@ export const BOOKS_AND_CHAPTERS: BookItem[] = [
   },
   {
     id: 2,
+    type: 'Textbook',
+    title: 'Polymer and Supramolecular Gels',
+    authors: 'Prof. Arun Kumar Nandi',
+    publisher: 'Royal Society of Chemistry (RSC), London, UK',
+    year: 2024,
+    details: 'Polymer Chemistry Series No. 47. Comprehensive reference textbook detailing physical and chemical crosslinking, thermoreversible supramolecular networks, functional hydrogels and organogels, stimuli-responsive behavior, and advanced biomedical and optoelectronic applications.',
+    isbnOrDoi: 'Hardback ISBN: 978-1-83767-420-6 | EPUB ISBN: 978-1-83767-853-2 | DOI: 10.1039/9781837678525'
+  },
+  {
+    id: 3,
     type: 'Book Chapter',
     title: 'Grafting of Electroactive Polymers',
     authors: 'A. K. Nandi, R. Ghosh, and D. P. Chatterjee',
@@ -400,7 +410,7 @@ export const BOOKS_AND_CHAPTERS: BookItem[] = [
     isbnOrDoi: 'DOI: 10.1007/978-3-030-45135-6_10'
   },
   {
-    id: 3,
+    id: 4,
     type: 'Book Chapter',
     title: 'Energy: Polymer-Functionalized Graphene',
     authors: 'A. K. Nandi, P. Chal, and A. Shit',
@@ -410,7 +420,7 @@ export const BOOKS_AND_CHAPTERS: BookItem[] = [
     isbnOrDoi: 'Cat #K20509'
   },
   {
-    id: 4,
+    id: 5,
     type: 'Book Chapter',
     title: 'A Concise Account on Poly(vinylidene fluoride) Nanocomposites',
     authors: 'A. K. Nandi and S. Manna',
@@ -420,7 +430,7 @@ export const BOOKS_AND_CHAPTERS: BookItem[] = [
     isbnOrDoi: 'DOI: 10.1002/0471440264.pst392.pub2'
   },
   {
-    id: 5,
+    id: 6,
     type: 'Book Chapter',
     title: 'Functionalization and Properties of Graphene',
     authors: 'A. K. Nandi, A. Kundu, and R. K. Layek',
@@ -430,7 +440,7 @@ export const BOOKS_AND_CHAPTERS: BookItem[] = [
     isbnOrDoi: 'Cat #K20509'
   },
   {
-    id: 6,
+    id: 7,
     type: 'Book Chapter',
     title: 'Polymer functionalized graphene via ATRP route for graphene based polymer nanocomposites',
     authors: 'A. K. Nandi, R. K. Layek, S. Samanta, and D. P. Chatterjee',
@@ -1095,10 +1105,24 @@ export const FACILITIES: Facility[] = [
 ];
 
 export const ALL_PUBLICATIONS: Publication[] = [
+  // 2026 (Communicated)
+  {
+    id: 1,
+    number: 1,
+    title: 'Multifunctional Polyaniline Gel Nanocomposites for Different Technology',
+    authors: 'A. K. Nandi',
+    journal: 'J. Power Sources',
+    year: 2026,
+    pages: 'Communicated',
+    publisher: 'Elsevier',
+    category: 'Energy & Supercapacitors',
+    highlight: 'Communicated to Journal of Power Sources (2026)'
+  },
+
   // 2025
   {
-    id: 260,
-    number: 260,
+    id: 2,
+    number: 2,
     title: 'Polythiophene Derived Nickel Cobaltite Nanocomposite Showing Excellent Photo-switching and Photo-supercapacitor Properties',
     authors: 'U. Basak, P. Ghosh, D. P. Chatterjee, G. Mahapatra, A. Banerjee and A. K. Nandi',
     journal: 'J. Mater. Chem. A',
@@ -1112,8 +1136,8 @@ export const ALL_PUBLICATIONS: Publication[] = [
 
   // 2024
   {
-    id: 259,
-    number: 259,
+    id: 3,
+    number: 3,
     title: 'Development of Organic Mixed Ion−Electron Conductive and Photo responsive Property in a Peptide Linked Boronic Acid Conjugated Naphthalimide Derivative',
     authors: 'P. Ghosh, K. Gayen, N. Hazra, B. Hansda, G. Mahapatra, S. Das, S. Das, A. K. Nandi and A. Banerjee',
     journal: 'ACS Applied Electronic Materials',
@@ -1124,8 +1148,8 @@ export const ALL_PUBLICATIONS: Publication[] = [
     category: 'Optoelectronics & Conducting Polymers'
   },
   {
-    id: 258,
-    number: 258,
+    id: 4,
+    number: 4,
     title: 'Enhanced Optoelectronic Properties of Polythiophene–g–Poly(dimethyl amino ethyl methacrylate)–b–Poly(diethylene glycol methyl ether methacrylate) Copolymers using ‘Grafting onto’ Synthetic Strategy',
     authors: 'U. Basak, D. P. Chatterjee and A. K. Nandi',
     journal: 'ACS Appl. Mater. Interfaces',
@@ -1136,8 +1160,8 @@ export const ALL_PUBLICATIONS: Publication[] = [
     category: 'Optoelectronics & Conducting Polymers'
   },
   {
-    id: 257,
-    number: 257,
+    id: 5,
+    number: 5,
     title: 'Emulsion Polymerized Sulfonic Acid Doped Polyaniline-co-Polythiophene Showing Photo-Switching Property by in situ Growth of Silver Nanocluster',
     authors: 'S. Mondal, U. Basak and A. K. Nandi',
     journal: 'ACS Applied Polymer Materials',
@@ -1148,8 +1172,8 @@ export const ALL_PUBLICATIONS: Publication[] = [
     category: 'Optoelectronics & Conducting Polymers'
   },
   {
-    id: 256,
-    number: 256,
+    id: 6,
+    number: 6,
     title: 'A review on Self-Assembly Driven Optoelectronic Properties of Polythiophene-Peptide and Polythiophene-Polymer conjugates',
     authors: 'A. K. Nandi',
     journal: 'Langmuir',
@@ -1161,8 +1185,8 @@ export const ALL_PUBLICATIONS: Publication[] = [
     highlight: 'Comprehensive invited feature review on molecular self-assembly principles for bio-hybrid electronics.'
   },
   {
-    id: 255,
-    number: 255,
+    id: 7,
+    number: 7,
     title: 'Peptide Appended Perylene Bisimide Containing Silver Nanoparticle-Based Trihybrid System with GO: Improvement of Photocatalytic and Photo-Switching Behavior',
     authors: 'P. Ghosh, S. Hazra, K. Gayen, N. Hazra, A. K. Nandi and A. Banerjee',
     journal: 'New J. Chemistry',
@@ -1173,8 +1197,8 @@ export const ALL_PUBLICATIONS: Publication[] = [
     category: 'Graphene & 2D Materials'
   },
   {
-    id: 254,
-    number: 254,
+    id: 8,
+    number: 8,
     title: 'Block Sequence Dependent Self-assembly and Optoelectronic Behavior of Thermo- and pH-sensitive Polythiophene-graft-Poly(diethylene glycol methyl ether methacrylate) -block- Poly(dimethyl amino ethyl methacrylate) Copolymers',
     authors: 'U. Basak, D. P. Chatterjee and A. K. Nandi',
     journal: 'Eur. Polym. J.',
@@ -1185,8 +1209,8 @@ export const ALL_PUBLICATIONS: Publication[] = [
     category: 'Optoelectronics & Conducting Polymers'
   },
   {
-    id: 253,
-    number: 253,
+    id: 9,
+    number: 9,
     title: 'Emulsion Polymerized Polyaniline-(dinonylnapthyl disulphonic acid) hydrogel showing Improved Supercapacitor and Photo-Current Performance by in situ Growth of AgNPs',
     authors: 'U. Basak, A. Das, S. Maity, D. P. Chatterjee and A. K. Nandi',
     journal: 'Colloids and Surfaces A: Physicochemical and Engineering Aspects',
@@ -1199,8 +1223,8 @@ export const ALL_PUBLICATIONS: Publication[] = [
 
   // 2023
   {
-    id: 252,
-    number: 252,
+    id: 10,
+    number: 10,
     title: 'Synthesis of carbohydrate based polythiophene graft poly(N,N-dimethyl aminoethyl methacrylate)-co-poly(GLU-HEM) copolymer for lectin sensing',
     authors: 'M. Pakhira, A. Karmakar, D. P. Chatterjee and A. K. Nandi',
     journal: 'J. Macromol. Sci., Part A: Pure and Applied Chemistry',
@@ -1211,8 +1235,8 @@ export const ALL_PUBLICATIONS: Publication[] = [
     category: 'Biomolecular Hybrids'
   },
   {
-    id: 251,
-    number: 251,
+    id: 11,
+    number: 11,
     title: 'Peptide-tethered Perylenebisimide Aggregates with Copper Nanoclusters showing Thermoresponsive and Photoresponsive Properties',
     authors: 'S. Hazra, D. Bairagi, N. Hazra, A. K. Nandi and A. Banerjee',
     journal: 'ChemistrySelect',
@@ -1223,8 +1247,8 @@ export const ALL_PUBLICATIONS: Publication[] = [
     category: 'Supramolecular Gels'
   },
   {
-    id: 250,
-    number: 250,
+    id: 12,
+    number: 12,
     title: 'Controlled Grafting of polythiophene and poly(vinylidene fluoride)',
     authors: 'A. K. Nandi, U. Basak and D. P. Chatterjee',
     journal: 'J. Macromol. Sci. Part A: Pure and Applied Chemistry',
@@ -1235,8 +1259,8 @@ export const ALL_PUBLICATIONS: Publication[] = [
     category: 'Fluoropolymers & PVDF'
   },
   {
-    id: 249,
-    number: 249,
+    id: 13,
+    number: 13,
     title: 'Light and Solvent Effect on Isomerization and Excimer Formation of Pyrene - Schiff Base Conjugate Sensing Aromatic Analytes',
     authors: 'S. Mondal, A. Panja and A. K. Nandi',
     journal: 'Macromol. Symp.',
@@ -1247,8 +1271,8 @@ export const ALL_PUBLICATIONS: Publication[] = [
     category: 'Supramolecular Gels'
   },
   {
-    id: 248,
-    number: 248,
+    id: 14,
+    number: 14,
     title: 'Polythiophene-g-Poly(methacrylic acid) and Perylene Diimide Appended Peptide Conjugates with Tuneable Photoluminescence, OMEIC and Photo-switching Properties',
     authors: 'S. Hazra, R. Ghosh, A. Palui, A. Ghosh, A. Banerjee and A. K. Nandi',
     journal: 'J. Mater. Chem. C',
@@ -1259,8 +1283,8 @@ export const ALL_PUBLICATIONS: Publication[] = [
     category: 'Optoelectronics & Conducting Polymers'
   },
   {
-    id: 247,
-    number: 247,
+    id: 15,
+    number: 15,
     title: 'Hybrid Polymer Gels for Energy Applications',
     authors: 'A. K. Nandi and D. P. Chatterjee',
     journal: 'J. Mater. Chem. A (10th Anniversary Issue)',
@@ -1274,8 +1298,8 @@ export const ALL_PUBLICATIONS: Publication[] = [
 
   // 2022
   {
-    id: 246,
-    number: 246,
+    id: 16,
+    number: 16,
     title: 'Organic Mixed Ion-Electron Conductivity in Polymer Hybrid Systems',
     authors: 'S. Hazra, A. Banerjee and A. K. Nandi',
     journal: 'ACS Omega',
@@ -1286,8 +1310,8 @@ export const ALL_PUBLICATIONS: Publication[] = [
     category: 'Optoelectronics & Conducting Polymers'
   },
   {
-    id: 245,
-    number: 245,
+    id: 17,
+    number: 17,
     title: 'Synthesis of PVDF Based Graft Copolymeric Antifouling Membranes Showing Affinity Driven Immobilization of Nucleobases',
     authors: 'U. Basak, M. Pakhira, S. Sahoo, S. Majumdar, R. Ghosh, J. Kundu, T. Ghosh, A. K. Nandi and D. P. Chatterjee',
     journal: 'ACS Appl. Polym. Mater.',
@@ -1298,8 +1322,8 @@ export const ALL_PUBLICATIONS: Publication[] = [
     category: 'Fluoropolymers & PVDF'
   },
   {
-    id: 244,
-    number: 244,
+    id: 18,
+    number: 18,
     title: 'Development of poly(vinylidene fluoride) graft random copolymer membrane for antifouling and antimicrobial applications',
     authors: 'M. Pakhira, S. Ghosh, Surajit Ghosh, D. P. Chatterjee and A. K. Nandi',
     journal: 'J. Ind. Eng. Chem.',
@@ -1310,8 +1334,8 @@ export const ALL_PUBLICATIONS: Publication[] = [
     category: 'Fluoropolymers & PVDF'
   },
   {
-    id: 243,
-    number: 243,
+    id: 19,
+    number: 19,
     title: 'Tuning of optoelectronic properties in Nano-hybrids of peptide appended perylenebisimides and carbon-nanodots',
     authors: 'S. Hazra, S. Paul, K. Basu, A. K. Nandi and A. Banerjee',
     journal: 'J. Phys. Chem. C',
@@ -1322,8 +1346,8 @@ export const ALL_PUBLICATIONS: Publication[] = [
     category: 'Graphene & 2D Materials'
   },
   {
-    id: 242,
-    number: 242,
+    id: 20,
+    number: 20,
     title: 'Tailor made synthesis of water-soluble polythiophene-graft-poly(caprolactone-block-dimethylaminoethyl methacrylate) copolymer and their pH tunable self-assembly and optoelectronic properties',
     authors: 'U. Haldar, S. Mondal, S. Hazra, S. Guin, L. Yeasmin, D. P. Chatterjee and A. K. Nandi',
     journal: 'Eur. Polym. J.',
@@ -1336,8 +1360,8 @@ export const ALL_PUBLICATIONS: Publication[] = [
 
   // 2021
   {
-    id: 241,
-    number: 241,
+    id: 21,
+    number: 21,
     title: 'Isomerization-induced Excimer Formation of Pyrene based Acylhydrazone Controlled by Light and Solvent Sensing Aromatic Analytes',
     authors: 'S. Mondal, A. Panja, D. Halder, P. Bairi and A. K. Nandi',
     journal: 'J. Phys. Chem. B',
@@ -1348,8 +1372,8 @@ export const ALL_PUBLICATIONS: Publication[] = [
     category: 'Supramolecular Gels'
   },
   {
-    id: 240,
-    number: 240,
+    id: 22,
+    number: 22,
     title: 'Development of Polythiophene-Tripeptide Covalent Conjugates Showing Excellent Structure Dependent Photophysical and Photocurrent Properties',
     authors: 'S. Mondal, S. Hazra, A. Shit, D. P. Chatterjee, A. Banerjee and A. K. Nandi',
     journal: 'J. Phys. Chem. C',
@@ -1360,8 +1384,8 @@ export const ALL_PUBLICATIONS: Publication[] = [
     category: 'Optoelectronics & Conducting Polymers'
   },
   {
-    id: 239,
-    number: 239,
+    id: 23,
+    number: 23,
     title: 'A Review on Recent Advances on Hybrid Supercapacitors',
     authors: 'D. P. Chatterjee and A. K. Nandi',
     journal: 'J. Mater. Chem. A',
@@ -1373,8 +1397,8 @@ export const ALL_PUBLICATIONS: Publication[] = [
     highlight: 'Comprehensive critical review with over 300 citations on pseudocapacitive hybrid architectures.'
   },
   {
-    id: 238,
-    number: 238,
+    id: 24,
+    number: 24,
     title: 'Reversible Stimuli-Dependent Aggregation-Induced Emission from a “Nonfluorescent” Amphiphilic PVDF Graft Copolymer',
     authors: 'M. Pakhira, D. P. Chatterjee, D. Mallick, R. Ghosh and A. K. Nandi',
     journal: 'Langmuir',
@@ -1387,8 +1411,8 @@ export const ALL_PUBLICATIONS: Publication[] = [
 
   // 2020
   {
-    id: 237,
-    number: 237,
+    id: 25,
+    number: 25,
     title: 'Fluorescence in “Nonfluorescent” Polymers',
     authors: 'D. P. Chatterjee, M. Pakhira and A. K. Nandi',
     journal: 'ACS Omega',
@@ -1399,8 +1423,8 @@ export const ALL_PUBLICATIONS: Publication[] = [
     category: 'Supramolecular Gels'
   },
   {
-    id: 236,
-    number: 236,
+    id: 26,
+    number: 26,
     title: 'A Robust Stimuli Responsive Eu 3+ - Metalo Organic Hydrogel and Xerogel Emitting White Light',
     authors: 'A. Panja, P. Bairi, D. Halder, S. Das and A. K. Nandi',
     journal: 'J. Colloid and Interface Science',
@@ -1411,8 +1435,8 @@ export const ALL_PUBLICATIONS: Publication[] = [
     category: 'Supramolecular Gels'
   },
   {
-    id: 235,
-    number: 235,
+    id: 27,
+    number: 27,
     title: 'Modulation of optoelectronic properties in a donor -acceptor conjugate between a cationic polythiophene and a peptide appended perylenebisimide amphiphile',
     authors: 'S. Hazra, A. Shit, R. Ghosh, K. Basu, A. Banerjee and A. K. Nandi',
     journal: 'J. Mater. Chem. C',
@@ -1423,8 +1447,8 @@ export const ALL_PUBLICATIONS: Publication[] = [
     category: 'Optoelectronics & Conducting Polymers'
   },
   {
-    id: 234,
-    number: 234,
+    id: 28,
+    number: 28,
     title: 'A Review on Recent Advances in Polymer and Peptide Hydrogels',
     authors: 'S. Mondal, S. Das and A. K. Nandi',
     journal: 'Soft Matter',
@@ -1437,8 +1461,8 @@ export const ALL_PUBLICATIONS: Publication[] = [
 
   // 2019
   {
-    id: 233,
-    number: 233,
+    id: 29,
+    number: 29,
     title: 'Influence of Poly(Vinylidene Fluoride) on Photovoltaic Performance of Interfacially Engineered Band Gap Modulated P3TAA-co-P3HT Perovskite Solar Cell at Ambient Condition',
     authors: 'A. Shit, P. Chal, S. Mandal and A. K. Nandi',
     journal: 'Polymer',
@@ -1449,8 +1473,8 @@ export const ALL_PUBLICATIONS: Publication[] = [
     category: 'Energy & Supercapacitors'
   },
   {
-    id: 232,
-    number: 232,
+    id: 30,
+    number: 30,
     title: 'Flexible Solid State Symmetric Supercapacitor Using HxWO3@rGO Composite with High Volumetric Energy and Power Density',
     authors: 'D. Mandal, P. Routh, A. K. Mahato and A. K. Nandi',
     journal: 'ChemElectroChem',
@@ -1461,8 +1485,8 @@ export const ALL_PUBLICATIONS: Publication[] = [
     category: 'Energy & Supercapacitors'
   },
   {
-    id: 231,
-    number: 231,
+    id: 31,
+    number: 31,
     title: 'Self-assembled Nanostructure MoS2 Quantum Dots Polyaniline Hybrid Gels for High Performance Solid State Flexible Supercapacitor',
     authors: 'S. Das, R. Ghosh, D. Mandal and A. K. Nandi',
     journal: 'ACS Appl. Energy Mater.',
@@ -1473,8 +1497,8 @@ export const ALL_PUBLICATIONS: Publication[] = [
     category: 'Energy & Supercapacitors'
   },
   {
-    id: 230,
-    number: 230,
+    id: 32,
+    number: 32,
     title: 'Electrochemically Modified Graphite Paper as an Advanced Electrode substrate for Supercapacitor Application',
     authors: 'D. Mandal, P. Routh, A. K. Mahato and A. K. Nandi',
     journal: 'J. Mater. Chem. A',
@@ -1485,8 +1509,8 @@ export const ALL_PUBLICATIONS: Publication[] = [
     category: 'Energy & Supercapacitors'
   },
   {
-    id: 225,
-    number: 225,
+    id: 33,
+    number: 33,
     title: 'Conducting Gels: A Chronicle of Technological Advances',
     authors: 'P. Chakraborty, S. Das and A. K. Nandi',
     journal: 'Progress in Polymer Science',
@@ -1498,8 +1522,8 @@ export const ALL_PUBLICATIONS: Publication[] = [
     highlight: 'Major flagship monograph review in Progress in Polymer Science (Impact Factor > 25).'
   },
   {
-    id: 224,
-    number: 224,
+    id: 34,
+    number: 34,
     title: 'Physical and Dielectric Properties of Poly(vinylidene fluoride) / Polybenzimidazole Functionalized Graphene Nanocomposites',
     authors: 'N. Maity, A. Mandal, K. Roy and A. K. Nandi',
     journal: 'J. Polym. Sci. Part B: Polym. Phys. Ed.',
@@ -1512,8 +1536,8 @@ export const ALL_PUBLICATIONS: Publication[] = [
 
   // 2018
   {
-    id: 222,
-    number: 222,
+    id: 35,
+    number: 35,
     title: 'Light Induced Conformational Change of Uracil Anchored Polythiophene Regulating Thermo Responsiveness',
     authors: 'R. Ghosh, S. Das, K. Bhattacharyya, D. P. Chatterjee, A. Biswas and A. K. Nandi',
     journal: 'Langmuir',
@@ -1524,8 +1548,8 @@ export const ALL_PUBLICATIONS: Publication[] = [
     category: 'Biomolecular Hybrids'
   },
   {
-    id: 221,
-    number: 221,
+    id: 36,
+    number: 36,
     title: 'Injectable Hydrogel of Vitamin B9 for Controlled Release of Both Hydrophilic and Hydrophobic Anticancer Drugs',
     authors: 'A. Panja, S. Das, A. Chakraborty, P. Chakraborty, S. Pal and A. K. Nandi',
     journal: 'ChemMedChem',
@@ -1536,8 +1560,8 @@ export const ALL_PUBLICATIONS: Publication[] = [
     category: 'Biomolecular Hybrids'
   },
   {
-    id: 218,
-    number: 218,
+    id: 37,
+    number: 37,
     title: 'Supramolecular Grafting of Doped Polyaniline Leads to an Unprecedented Solubility Enhancement, Radical Cation Stabilization, and Morphology Transformation',
     authors: 'N. Maity, A. Dawn, A. Kuila and A. K. Nandi',
     journal: 'J. Mater. Chem. A',
@@ -1548,8 +1572,8 @@ export const ALL_PUBLICATIONS: Publication[] = [
     category: 'Optoelectronics & Conducting Polymers'
   },
   {
-    id: 212,
-    number: 212,
+    id: 38,
+    number: 38,
     title: 'Optoelectronic Properties of Self-assembled Nanostructures of Polymer Functionalized Polythiophene and Graphene',
     authors: 'N. Maity, R. Ghosh and A. K. Nandi',
     journal: 'Langmuir',
@@ -1561,8 +1585,8 @@ export const ALL_PUBLICATIONS: Publication[] = [
     highlight: 'Selected as Langmuir Editors’ Choice Article.'
   },
   {
-    id: 211,
-    number: 211,
+    id: 39,
+    number: 39,
     title: 'A New Facile Synthesis of Tungsten Oxide from Tungsten Disulfide: Structure Dependent Supercapacitor and Negative Differential Resistance Properties',
     authors: 'D. Mandal, P. Routh and A. K. Nandi',
     journal: 'Small',
@@ -1575,8 +1599,8 @@ export const ALL_PUBLICATIONS: Publication[] = [
 
   // 2017
   {
-    id: 206,
-    number: 206,
+    id: 40,
+    number: 40,
     title: 'Multi-functional Poly(vinylidene fluoride) graft Copolymers',
     authors: 'A. Kuila, D. P. Chatterjee, N. Maity and A. K. Nandi',
     journal: 'J. Polym. Sci. Part A: Polym. Chem. Ed.',
@@ -1588,8 +1612,8 @@ export const ALL_PUBLICATIONS: Publication[] = [
     highlight: 'Featured as Highlight Article in Journal of Polymer Science.'
   },
   {
-    id: 205,
-    number: 205,
+    id: 41,
+    number: 41,
     title: 'Nucleic Acid Based Polymer and Nanoparticle Conjugates: Synthesis, Properties and Applications',
     authors: 'A. Kundu, S. Nandi and A. K. Nandi',
     journal: 'Progress in Materials Science',
@@ -1601,8 +1625,8 @@ export const ALL_PUBLICATIONS: Publication[] = [
     highlight: 'Comprehensive landmark treatise on nucleic acid biomaterial conjugates (Impact Factor ~35).'
   },
   {
-    id: 200,
-    number: 200,
+    id: 42,
+    number: 42,
     title: 'Water Soluble Ionic Polythiophenes for Biological and Analytical Applications',
     authors: 'S. Das, P. Routh, R. Ghosh, D. P. Chatterjee and A. K. Nandi',
     journal: 'Polymer International',
@@ -1615,8 +1639,8 @@ export const ALL_PUBLICATIONS: Publication[] = [
 
   // 2016
   {
-    id: 198,
-    number: 198,
+    id: 43,
+    number: 43,
     title: 'An Insight into the Hybrid Dye-Sensitized Solar Cell from Polyaniline-CdS Nanotubes through Impedance Spectroscopy',
     authors: 'A. Shit, P. Chal and A. K. Nandi',
     journal: 'Physical Chemistry Chemical Physics',
@@ -1627,8 +1651,8 @@ export const ALL_PUBLICATIONS: Publication[] = [
     category: 'Energy & Supercapacitors'
   },
   {
-    id: 197,
-    number: 197,
+    id: 44,
+    number: 44,
     title: 'Enhancement of Energy Storage and Photoresponse Properties of Folic acid / Polyaniline Hybrid Hydrogel by in-situ Growth of Ag-Nanoparticles',
     authors: 'S. Das, P. Chakraborty, S. Mondal, A. Shit and A. K. Nandi',
     journal: 'ACS Applied Materials and Interfaces',
@@ -1639,8 +1663,8 @@ export const ALL_PUBLICATIONS: Publication[] = [
     category: 'Energy & Supercapacitors'
   },
   {
-    id: 196,
-    number: 196,
+    id: 45,
+    number: 45,
     title: 'Hierarchical nanostructured polyaniline functionalized graphene / poly(vinylidene fluoride) composites for improved dielectric performances',
     authors: 'N. Maity, A. Mandal and A. K. Nandi',
     journal: 'Polymer',
@@ -1651,8 +1675,8 @@ export const ALL_PUBLICATIONS: Publication[] = [
     category: 'Fluoropolymers & PVDF'
   },
   {
-    id: 185,
-    number: 185,
+    id: 46,
+    number: 46,
     title: 'Nanoengineering of a Supramolecular Gel by Co-polymer Incorporation: Enhancement of Gelation Rate, Mechanical Property, Fluorescence and Conductivity',
     authors: 'P. Chakraborty, S. Das, S. Mondal, P. Bairi and A. K. Nandi',
     journal: 'Langmuir',
@@ -1665,8 +1689,8 @@ export const ALL_PUBLICATIONS: Publication[] = [
 
   // 2015
   {
-    id: 176,
-    number: 176,
+    id: 47,
+    number: 47,
     title: 'Light Induced E-Z Isomerization in a Multi-responsive Organogel : Elucidation from 1H NMR Spectroscopy',
     authors: 'S. Mondal, P. Chakraborty, P. Bairi, D. P. Chatterjee and A. K. Nandi',
     journal: 'Chem. Commun.',
@@ -1677,8 +1701,8 @@ export const ALL_PUBLICATIONS: Publication[] = [
     category: 'Supramolecular Gels'
   },
   {
-    id: 175,
-    number: 175,
+    id: 48,
+    number: 48,
     title: 'Thermosensitive Antifouling Property of a Water-Soluble Poly(vinylidene fluoride) Graft Copolymer',
     authors: 'A. Kuila, N. Maity, D. P. Chatterjee and A. K. Nandi',
     journal: 'J. Mater. Chem. A',
@@ -1689,8 +1713,8 @@ export const ALL_PUBLICATIONS: Publication[] = [
     category: 'Fluoropolymers & PVDF'
   },
   {
-    id: 171,
-    number: 171,
+    id: 49,
+    number: 49,
     title: 'Fluorescent Graphene Oxide via Polymer Grafting: An Efficient Nanocarrier for Both Hydrophilic and Hydrophobic Drug',
     authors: 'A. Kundu, S. Nandi, P. Das and A. K. Nandi',
     journal: 'ACS Appl. Mater. & Interfaces',
@@ -1703,8 +1727,8 @@ export const ALL_PUBLICATIONS: Publication[] = [
 
   // 2014
   {
-    id: 165,
-    number: 165,
+    id: 50,
+    number: 50,
     title: 'Co-assembly of a Small Molecular Gelator of Pyromellitic Dianhydride Derivative with Polyaniline: A New Generation Gel with Exciting Optoelectronic and Photovoltaic Properties',
     authors: 'P. Bairi, P. Chakraborty, A. Shit, S. Mondal, B. Roy and A. K. Nandi',
     journal: 'Langmuir',
@@ -1715,8 +1739,8 @@ export const ALL_PUBLICATIONS: Publication[] = [
     category: 'Optoelectronics & Conducting Polymers'
   },
   {
-    id: 162,
-    number: 162,
+    id: 51,
+    number: 51,
     title: 'Nanojacketing and Dejacketing of ds-DNA: A Non-destructive Characterization of Nanojacketed Sample by Impedance Spectroscopy',
     authors: 'S. Nandi, P. Mukherjee, A. Kundu and A. K. Nandi',
     journal: 'J. Phys. Chem. B',
@@ -1728,8 +1752,8 @@ export const ALL_PUBLICATIONS: Publication[] = [
     highlight: 'Pioneered non-destructive impedance technique to verify DNA intactness during polymer sheath removal.'
   },
   {
-    id: 161,
-    number: 161,
+    id: 52,
+    number: 52,
     title: 'Controlled Grafting of Poly(vinylidene fluoride) by Coupled Atom Transfer Radical Addition and Atom Transfer Radical Polymerization',
     authors: 'A. Kuila, D. P. Chatterjee, R. K. Layek and A. K. Nandi',
     journal: 'J. Polym. Sci. Part A: Polym. Chem. Ed.',
@@ -1740,8 +1764,8 @@ export const ALL_PUBLICATIONS: Publication[] = [
     category: 'Fluoropolymers & PVDF'
   },
   {
-    id: 160,
-    number: 160,
+    id: 53,
+    number: 53,
     title: 'Improved Mechanical and Electronic Properties of Co-assembled Folic Acid Gel with Aniline and Polyaniline',
     authors: 'P. Chakraborty, P. Bairi, B. Roy and A. K. Nandi',
     journal: 'ACS Appl. Mater. & Interfaces',
@@ -1754,8 +1778,8 @@ export const ALL_PUBLICATIONS: Publication[] = [
 
   // 2013
   {
-    id: 156,
-    number: 156,
+    id: 54,
+    number: 54,
     title: 'Graphene Quantum Dots from Sono-Fenton Reaction and its Hybrid with a Polythiophene graft Copolymer towards Photovoltaic Application',
     authors: 'P. Routh, S. Das, A. Shit, P. Bairi, P. Das and A. K. Nandi',
     journal: 'ACS Appl. Mater. & Interfaces',
@@ -1766,8 +1790,8 @@ export const ALL_PUBLICATIONS: Publication[] = [
     category: 'Graphene & 2D Materials'
   },
   {
-    id: 154,
-    number: 154,
+    id: 55,
+    number: 55,
     title: 'Ionic Liquid Integrated Multiwalled Carbon Nanotube in Poly(vinylidene fluoride) Matrix: Formation of Piezoelectric β-Polymorph with Significant Reinforcement and Conductivity Improvement',
     authors: 'A. Mandal and A. K. Nandi',
     journal: 'ACS Appl. Mater. & Interfaces',
@@ -1778,8 +1802,8 @@ export const ALL_PUBLICATIONS: Publication[] = [
     category: 'Fluoropolymers & PVDF'
   },
   {
-    id: 150,
-    number: 150,
+    id: 56,
+    number: 56,
     title: 'A Review on Synthesis and Properties of Polymer Functionalized Graphene',
     authors: 'R. K. Layek and A. K. Nandi',
     journal: 'Polymer (Feature Article)',
@@ -1791,8 +1815,8 @@ export const ALL_PUBLICATIONS: Publication[] = [
     highlight: 'Invited Polymer Feature Article with over 800 citations worldwide.'
   },
   {
-    id: 148,
-    number: 148,
+    id: 57,
+    number: 57,
     title: 'Co-assembled White Light Emitting Hydrogel of Melamine',
     authors: 'P. Bairi, B. Roy, P. Chakraborty and A. K. Nandi',
     journal: 'ACS Appl. Mater. and Interfaces',
@@ -1806,8 +1830,8 @@ export const ALL_PUBLICATIONS: Publication[] = [
 
   // 2012
   {
-    id: 141,
-    number: 141,
+    id: 58,
+    number: 58,
     title: 'Light Harvesting Bi-component Hydrogel with Tunable FRET Emission',
     authors: 'P. Bairi, B. Roy and A. K. Nandi',
     journal: 'Chem. Commun.',
@@ -1818,8 +1842,8 @@ export const ALL_PUBLICATIONS: Publication[] = [
     category: 'Supramolecular Gels'
   },
   {
-    id: 140,
-    number: 140,
+    id: 59,
+    number: 59,
     title: 'A Comparison of Ethidium Bromide Adsorbed Graphene Templates as a Platform for Preferential Sensing of DNA',
     authors: 'S. Nandi, P. Routh, R. K. Layek and A. K. Nandi',
     journal: 'Biomacromolecules',
@@ -1830,8 +1854,8 @@ export const ALL_PUBLICATIONS: Publication[] = [
     category: 'Biomolecular Hybrids'
   },
   {
-    id: 139,
-    number: 139,
+    id: 60,
+    number: 60,
     title: 'Highly Fluorescent Graphene Oxide-Poly(vinyl alcohol) Hybrid: An Effective Material For Specific Au3+ Ion Sensor',
     authors: 'A. Kundu, R. K. Layek, A. Kuila and A. K. Nandi',
     journal: 'ACS Appl. Mater. Interfaces',
@@ -1842,8 +1866,8 @@ export const ALL_PUBLICATIONS: Publication[] = [
     category: 'Graphene & 2D Materials'
   },
   {
-    id: 138,
-    number: 138,
+    id: 61,
+    number: 61,
     title: 'Improved Mechanical and Photophysical Properties of Chitosan Incorporated Folic Acid gel Possessing the Characteristics of Dye and Metal Ion Absorption',
     authors: 'P. Chakraborty, B. Roy, P. Bairi and A. K. Nandi',
     journal: 'J. Mater. Chem.',
@@ -1854,8 +1878,8 @@ export const ALL_PUBLICATIONS: Publication[] = [
     category: 'Supramolecular Gels'
   },
   {
-    id: 134,
-    number: 134,
+    id: 62,
+    number: 62,
     title: 'Polythiophene-g-Poly(dimethylaminoethyl methacrylate) Doped Methyl Cellulose Hydrogel Behaving like a Polymeric AND Logic Gate',
     authors: 'S. Samanta, S. Das, R. K. Layek, D. P. Chatterjee and A. K. Nandi',
     journal: 'Soft Matter',
@@ -1866,8 +1890,8 @@ export const ALL_PUBLICATIONS: Publication[] = [
     category: 'Optoelectronics & Conducting Polymers'
   },
   {
-    id: 131,
-    number: 131,
+    id: 63,
+    number: 63,
     title: 'Dendritic morphology in graphene sulphonic acid / poly(vinyl alcohol) composite',
     authors: 'R. K. Layek, S. Samanta and A. K. Nandi',
     journal: 'Carbon',
@@ -1880,8 +1904,8 @@ export const ALL_PUBLICATIONS: Publication[] = [
 
   // 2011
   {
-    id: 120,
-    number: 120,
+    id: 64,
+    number: 64,
     title: 'Enhanced Photoluminescence and Negative Differential Resistance of Polyaniline Sulfonic Acid - RNA - Au Nanobiocomposites',
     authors: 'P. Routh, A. Garai and A. K. Nandi',
     journal: 'Physical Chemistry Chemical Physics',
@@ -1893,8 +1917,8 @@ export const ALL_PUBLICATIONS: Publication[] = [
     highlight: 'Highlighted in Nature India (doi:10.1038/nindia.2011.124).'
   },
   {
-    id: 118,
-    number: 118,
+    id: 65,
+    number: 65,
     title: 'Selective colorimetric sensing of mercury (II) using turn off - turn on mechanism from riboflavin stabilized silver nanoparticles in aqueous medium',
     authors: 'B. Roy, P. Bairi and A. K. Nandi',
     journal: 'Analyst',
@@ -1905,8 +1929,8 @@ export const ALL_PUBLICATIONS: Publication[] = [
     category: 'Biomolecular Hybrids'
   },
   {
-    id: 112,
-    number: 112,
+    id: 66,
+    number: 66,
     title: 'Melamine recognition through riboflavin (vitamin B2) stabilized gold nanoparticles',
     authors: 'B. Roy, A. Saha and A. K. Nandi',
     journal: 'Analyst',
@@ -1919,8 +1943,8 @@ export const ALL_PUBLICATIONS: Publication[] = [
 
   // 2010
   {
-    id: 109,
-    number: 109,
+    id: 67,
+    number: 67,
     title: 'Physical and Mechanical Properties of Poly(methyl methacrylate) -functionalized Graphene / Poly(vinylidine fluoride) Nanocomposites : Piezoelectric β Polymorph Formation',
     authors: 'R. K. Layek, S. Samanta, D. P. Chatterjee and A. K. Nandi',
     journal: 'Polymer',
@@ -1931,8 +1955,8 @@ export const ALL_PUBLICATIONS: Publication[] = [
     category: 'Fluoropolymers & PVDF'
   },
   {
-    id: 101,
-    number: 101,
+    id: 68,
+    number: 68,
     title: 'RNA - poly(o-methoxy aniline) hybrid templated growth of Ag-nanoparticles and nanojacketting : Physical and electronic properties',
     authors: 'P. Routh, P. Mukherjee and A. K. Nandi',
     journal: 'Langmuir',
@@ -1944,8 +1968,8 @@ export const ALL_PUBLICATIONS: Publication[] = [
     highlight: 'Coined the scientific term "nanojacketting"; highlighted in Nature India (doi:10.1038/nindia.2010.53).'
   },
   {
-    id: 100,
-    number: 100,
+    id: 69,
+    number: 69,
     title: 'Aucore-Agshell Bimetallic Nanoparticles from a Simple Interfacial Redox Process Using a Conducting Polymer',
     authors: 'Pratap Mukherjee and Arun K. Nandi',
     journal: 'J. Colloid & Interface Science',
@@ -1958,8 +1982,8 @@ export const ALL_PUBLICATIONS: Publication[] = [
 
   // 2009
   {
-    id: 89,
-    number: 89,
+    id: 70,
+    number: 70,
     title: 'Multifunctional Hydrophilic Poly(vinylidene fluoride) Graft Copolymer with Super-toughness and Super-gluing Properties',
     authors: 'S. Samanta, D. P. Chatterjee, S. Manna, A. Mandal, A. Garai and A. K. Nandi',
     journal: 'Macromolecules',
@@ -1971,8 +1995,8 @@ export const ALL_PUBLICATIONS: Publication[] = [
     highlight: 'Groundbreaking ATRP grafting of DMAEMA from >CF2 groups yielding 1970% toughness increase.'
   },
   {
-    id: 88,
-    number: 88,
+    id: 71,
+    number: 71,
     title: 'Two-Component Thermoreversible Hydrogels of Melamine and Gallic Acid',
     authors: 'A. Saha, B. Roy, A. Garai and A. K. Nandi',
     journal: 'Langmuir',
@@ -1985,8 +2009,8 @@ export const ALL_PUBLICATIONS: Publication[] = [
 
   // 2008
   {
-    id: 87,
-    number: 87,
+    id: 72,
+    number: 72,
     title: 'Morphology, Structure, Rheology and Thermodynamics of Piezoelectric Poly(vinylidene fluoride)/ Ethylene Carbonate Thermoreversible Gel',
     authors: 'D. Dasgupta, S. Manna, A. Garai, A. Dawn, C. Rochas, J. M. Guenet and A. K. Nandi',
     journal: 'Macromolecules',
@@ -1999,8 +2023,8 @@ export const ALL_PUBLICATIONS: Publication[] = [
 
   // 2007
   {
-    id: 82,
-    number: 82,
+    id: 73,
+    number: 73,
     title: 'A Mechanistic Approach on Self-organization of the Two-Component Thermoreversible Hydrogel of Riboflavin and Melamine',
     authors: 'A. Saha, S. Manna and A. K. Nandi',
     journal: 'Langmuir',
@@ -2011,8 +2035,8 @@ export const ALL_PUBLICATIONS: Publication[] = [
     category: 'Supramolecular Gels'
   },
   {
-    id: 80,
-    number: 80,
+    id: 74,
+    number: 74,
     title: 'Piezoelectric β-Polymorph in Poly(vinylidene fluoride)-Functionalized Multiwalled Carbon Nanotube Nanocomposite',
     authors: 'S. Manna and A. K. Nandi',
     journal: 'J. Phys. Chem. C',
@@ -2023,8 +2047,8 @@ export const ALL_PUBLICATIONS: Publication[] = [
     category: 'Fluoropolymers & PVDF'
   },
   {
-    id: 76,
-    number: 76,
+    id: 75,
+    number: 75,
     title: 'In-Situ Synthesis of Soluble Poly(3-Hexyl Thiophene) / Multi-walled Carbon Nanotube Composite : Physical, Mechanical and Conductivity properties',
     authors: 'B. K. Kuila, S. Malik, S. K. Batabyal and A. K. Nandi',
     journal: 'Macromolecules',
@@ -2037,8 +2061,8 @@ export const ALL_PUBLICATIONS: Publication[] = [
 
   // 2006
   {
-    id: 70,
-    number: 70,
+    id: 76,
+    number: 76,
     title: 'A two Component Thermoreversible Hydrogel of Riboflavin and Melamine: Enhancement of Photoluminescence in the Gel form',
     authors: 'S. Manna, A. Saha and A. K. Nandi',
     journal: 'Chem. Commun.',
@@ -2049,8 +2073,8 @@ export const ALL_PUBLICATIONS: Publication[] = [
     category: 'Supramolecular Gels'
   },
   {
-    id: 64,
-    number: 64,
+    id: 77,
+    number: 77,
     title: 'DNA - Poly(o-methoxyaniline) Hybrid: Structure, Morphology and Uncoiling of Poly(o-methoxyaniline) on DNA surface',
     authors: 'A. Dawn and A. K. Nandi',
     journal: 'Langmuir',
@@ -2063,8 +2087,8 @@ export const ALL_PUBLICATIONS: Publication[] = [
 
   // 2005
   {
-    id: 62,
-    number: 62,
+    id: 78,
+    number: 78,
     title: 'Slow Doping Rate in DNA - Poly(o-methoxyaniline) Hybrid: Uncoiling of Poly(o-methoxyaniline) Chain on DNA Template',
     authors: 'A. Dawn and A. K. Nandi',
     journal: 'Macromolecules',
@@ -2075,8 +2099,8 @@ export const ALL_PUBLICATIONS: Publication[] = [
     category: 'Biomolecular Hybrids'
   },
   {
-    id: 59,
-    number: 59,
+    id: 79,
+    number: 79,
     title: 'Multiporous Polymeric Materials from Thermoreversible Poly(vinylidene fluoride) Gels',
     authors: 'D. Dasgupta and A. K. Nandi',
     journal: 'Macromolecules',
@@ -2089,8 +2113,8 @@ export const ALL_PUBLICATIONS: Publication[] = [
 
   // 2004
   {
-    id: 53,
-    number: 53,
+    id: 80,
+    number: 80,
     title: 'Physical, Mechanical, and Conductivity Properties of Poly(3-hexylthiophene)-Montmorillonite Clay Nanocomposites Produced by the Solvent Casting Method',
     authors: 'B. Kuila and A. K. Nandi',
     journal: 'Macromolecules',
@@ -2101,8 +2125,8 @@ export const ALL_PUBLICATIONS: Publication[] = [
     category: 'Optoelectronics & Conducting Polymers'
   },
   {
-    id: 52,
-    number: 52,
+    id: 81,
+    number: 81,
     title: 'Supramolecular Organization of ± Camphor-10-sulfonic acid and N,N Dimethyl Formamide into Giant Spherulites',
     authors: 'S. Manna and A. K. Nandi',
     journal: 'J. Phys. Chem. B (Letters)',
@@ -2115,8 +2139,8 @@ export const ALL_PUBLICATIONS: Publication[] = [
 
   // 2003
   {
-    id: 48,
-    number: 48,
+    id: 82,
+    number: 82,
     title: 'Cocrystallization behaviour of poly(3-alkyl thiophenes): Influence of alkyl chain length and head to tail regioregularity',
     authors: 'S. Pal and A. K. Nandi',
     journal: 'Macromolecules',
@@ -2127,8 +2151,8 @@ export const ALL_PUBLICATIONS: Publication[] = [
     category: 'Polymer Blends & Thermodynamics'
   },
   {
-    id: 44,
-    number: 44,
+    id: 83,
+    number: 83,
     title: 'Supramolecular Organization of Poly(vinylidene fluoride)–Camphor sulfonic acid Blends: Giant Spherulites',
     authors: 'M. H. Rahman and A. K. Nandi',
     journal: 'Langmuir',
@@ -2141,8 +2165,8 @@ export const ALL_PUBLICATIONS: Publication[] = [
 
   // 2002
   {
-    id: 37,
-    number: 37,
+    id: 84,
+    number: 84,
     title: 'On the crystallization mechanism of poly(ethylene terepthalate) in its blends with poly(vinylidene fluoride)',
     authors: 'M. H. Rahaman and A. K. Nandi',
     journal: 'Polymer',
@@ -2153,8 +2177,8 @@ export const ALL_PUBLICATIONS: Publication[] = [
     category: 'Polymer Blends & Thermodynamics'
   },
   {
-    id: 36,
-    number: 36,
+    id: 85,
+    number: 85,
     title: 'Crystallization mechanism of regioregular poly(3-alkyl thiophene)s',
     authors: 'S. Malik and A. K. Nandi',
     journal: 'J. Polym. Sci., Polym. Phys. Ed.',
@@ -2167,8 +2191,8 @@ export const ALL_PUBLICATIONS: Publication[] = [
 
   // 2001
   {
-    id: 32,
-    number: 32,
+    id: 86,
+    number: 86,
     title: 'Sulphonic acid doped thermoreversible polyaniline gels: 2. Influence of sulfonic acid content on the morphological, thermodynamical and conductivity properties',
     authors: 'T. Jana and A. K. Nandi',
     journal: 'Langmuir',
@@ -2179,8 +2203,8 @@ export const ALL_PUBLICATIONS: Publication[] = [
     category: 'Supramolecular Gels'
   },
   {
-    id: 29,
-    number: 29,
+    id: 87,
+    number: 87,
     title: 'Thermoreversible gelation of Regioregular Poly(3-hexylthiophene) in Xylene',
     authors: 'S. Malik, T. Jana and A. K. Nandi',
     journal: 'Macromolecules',
@@ -2193,8 +2217,8 @@ export const ALL_PUBLICATIONS: Publication[] = [
 
   // 2000
   {
-    id: 27,
-    number: 27,
+    id: 88,
+    number: 88,
     title: 'Thermoreversible gelation of poly(vinylidene fluoride) in diesters: Influence of intermittent length on morphology and thermodynamics of gelation',
     authors: 'A. K. Dikshit and A. K. Nandi',
     journal: 'Macromolecules',
@@ -2205,8 +2229,8 @@ export const ALL_PUBLICATIONS: Publication[] = [
     category: 'Fluoropolymers & PVDF'
   },
   {
-    id: 26,
-    number: 26,
+    id: 89,
+    number: 89,
     title: 'Sulphonic acid doped thermoreversible polyaniline gels: Morphological, Structural and thermodynamical investigations',
     authors: 'T. Jana and A. K. Nandi',
     journal: 'Langmuir',
@@ -2219,8 +2243,8 @@ export const ALL_PUBLICATIONS: Publication[] = [
 
   // 1990s
   {
-    id: 23,
-    number: 23,
+    id: 90,
+    number: 90,
     title: 'Thermoreversible gelation of poly(vinylidine fluoride) in diethyl adipate: A concerted mechanism',
     authors: 'A. K. Dikshit and A. K. Nandi',
     journal: 'Macromolecules',
@@ -2231,8 +2255,8 @@ export const ALL_PUBLICATIONS: Publication[] = [
     category: 'Fluoropolymers & PVDF'
   },
   {
-    id: 17,
-    number: 17,
+    id: 91,
+    number: 91,
     title: 'Influence of chain structure on the crystallization mechanism of poly(vinylidene fluoride)/poly(methyl acrylate) blends; Evidence of chain extension due to blending',
     authors: 'Pralay Maiti and Arun K. Nandi',
     journal: 'Polymer',
@@ -2243,8 +2267,8 @@ export const ALL_PUBLICATIONS: Publication[] = [
     category: 'Polymer Blends & Thermodynamics'
   },
   {
-    id: 15,
-    number: 15,
+    id: 92,
+    number: 92,
     title: 'Kinetic immiscibility in crystalline polymer and amorphous polymer blends',
     authors: 'A. K. Nandi and Pralay Maiti',
     journal: 'Polymer',
@@ -2256,8 +2280,8 @@ export const ALL_PUBLICATIONS: Publication[] = [
     highlight: 'Introduced the foundational concept of kinetic immiscibility in aged polymer blends.'
   },
   {
-    id: 12,
-    number: 12,
+    id: 93,
+    number: 93,
     title: 'Influence of chain structure on the miscibility of poly(vinylidene fluoride) with poly(methyl acrylate)',
     authors: 'P. Maiti and A. K. Nandi',
     journal: 'Macromolecules',
@@ -2268,8 +2292,8 @@ export const ALL_PUBLICATIONS: Publication[] = [
     category: 'Polymer Blends & Thermodynamics'
   },
   {
-    id: 11,
-    number: 11,
+    id: 94,
+    number: 94,
     title: 'On the gelation rates of thermoreversible poly(vinylidene fluoride) gels',
     authors: 'S. Mal, P. Maiti and A. K. Nandi',
     journal: 'Macromolecules',
@@ -2280,8 +2304,8 @@ export const ALL_PUBLICATIONS: Publication[] = [
     category: 'Fluoropolymers & PVDF'
   },
   {
-    id: 10,
-    number: 10,
+    id: 95,
+    number: 95,
     title: 'Co-crystallization of poly(vinylidene fluoride) and vinylidene fluoride – tetrafluoroethylene copolymers',
     authors: 'J. Datta and A. K. Nandi',
     journal: 'Polymer',
@@ -2292,8 +2316,8 @@ export const ALL_PUBLICATIONS: Publication[] = [
     category: 'Polymer Blends & Thermodynamics'
   },
   {
-    id: 5,
-    number: 5,
+    id: 96,
+    number: 96,
     title: 'The influence of chain structure on the equilibrium melting temperature of poly(vinylidene fluoride)',
     authors: 'A. K. Nandi and L. Mandelkern',
     journal: 'J. Polym. Sci. (Polymer Physics Ed.)',
@@ -2307,8 +2331,8 @@ export const ALL_PUBLICATIONS: Publication[] = [
 
   // 1980s
   {
-    id: 4,
-    number: 4,
+    id: 97,
+    number: 97,
     title: 'On the occurrence of cusps in the Tg – composition diagrams of compatible polymer pairs',
     authors: 'A. K. Nandi, B. M. Mandal, S. N. Bhattacharyya and S. K. Roy',
     journal: 'Polymer Communications',
@@ -2319,8 +2343,8 @@ export const ALL_PUBLICATIONS: Publication[] = [
     category: 'Polymer Blends & Thermodynamics'
   },
   {
-    id: 3,
-    number: 3,
+    id: 98,
+    number: 98,
     title: 'Cloud point diagrams of semicrystalline polymer-diluent system: Poly (ε - caprolactone) + some binary cononsolvents',
     authors: 'A. K. Nandi',
     journal: 'J. Polym. Materials',
@@ -2331,8 +2355,8 @@ export const ALL_PUBLICATIONS: Publication[] = [
     category: 'Polymer Blends & Thermodynamics'
   },
   {
-    id: 2,
-    number: 2,
+    id: 99,
+    number: 99,
     title: 'Miscibility of poly(methyl acrylate) and poly(vinyl acetate): Incompatibility in solution and thermodynamic characterization by inverse gas chromatography',
     authors: 'A. K. Nandi, B. M. Mandal and S. N. Bhattacharyya',
     journal: 'Macromolecules',
@@ -2343,8 +2367,8 @@ export const ALL_PUBLICATIONS: Publication[] = [
     category: 'Polymer Blends & Thermodynamics'
   },
   {
-    id: 1,
-    number: 1,
+    id: 100,
+    number: 100,
     title: 'Co-nonsolvent systems for poly(ε-caprolactone) and poly(methyl methacrylate)',
     authors: 'A. K. Nandi, U. K. Sen, S. N. Bhattacharyya and B. M. Mandal',
     journal: 'Eur. Polym. J.',

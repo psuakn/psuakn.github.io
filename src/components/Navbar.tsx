@@ -14,9 +14,9 @@ export const Navbar: React.FC<NavbarProps> = ({ isDark, toggleDark, activeSectio
   const navLinks = [
     { name: 'About', href: '#about', icon: FileText },
     { name: 'Research', href: '#research', icon: Microscope },
-    { name: 'Publications', href: '#publications', icon: BookOpen, badge: '260+' },
+    { name: 'Publications', href: '#publications', icon: BookOpen, badge: '268' },
     { name: 'Group', href: '#group', icon: Users },
-    { name: 'Alumni', href: '#alumni', icon: GraduationCap, badge: '37' },
+    { name: 'Alumni', href: '#alumni', icon: GraduationCap, badge: '37+1' },
     { name: 'Facilities', href: '#facilities', icon: Microscope },
     { name: 'Honors', href: '#honors', icon: Award },
     { name: 'Contact', href: '#contact', icon: Mail },

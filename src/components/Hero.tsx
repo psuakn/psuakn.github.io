@@ -64,7 +64,7 @@ export const Hero: React.FC = () => {
                 className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-indigo-700 hover:bg-indigo-800 dark:bg-indigo-600 dark:hover:bg-indigo-700 text-white font-medium text-sm transition-all shadow-sm shadow-indigo-600/20"
               >
                 <BookOpen className="w-4 h-4" />
-                <span>Explore 260 Publications</span>
+                <span>Explore {PROFESSOR_INFO.totalPublications} Publications</span>
                 <ArrowRight className="w-4 h-4" />
               </a>
 
@@ -80,7 +80,7 @@ export const Hero: React.FC = () => {
                 className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-750 text-slate-800 dark:text-slate-200 border border-slate-300 dark:border-slate-700 font-medium text-sm transition-all shadow-xs"
               >
                 <GraduationCap className="w-4 h-4 text-indigo-600 dark:text-indigo-400" />
-                <span>37 Ph.D. Alumni</span>
+                <span>{PROFESSOR_INFO.phdSupervised}+1 Ph.D. Alumni</span>
               </a>
 
               <a
@@ -158,7 +158,7 @@ export const Hero: React.FC = () => {
                 <div className="flex items-start gap-2.5 text-xs text-slate-600 dark:text-slate-300">
                   <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
                   <span>
-                    <strong>Author of RSC Reference Textbook</strong> on "Polymer Functionalized Graphene" (2021).
+                    <strong>Author of Two RSC Reference Textbooks</strong> on "Polymer Functionalized Graphene" (2021) and "Polymer and Supramolecular Gels" (2024).
                   </span>
                 </div>
               </div>
@@ -177,7 +177,7 @@ export const Hero: React.FC = () => {
               {PROFESSOR_INFO.totalPublications}
             </div>
             <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">
-              Refereed Publications (85 ACS · 58 RSC · 40 Wiley · 39 Elsevier)
+              Refereed Publications (91 ACS · 59 RSC · 41 Elsevier · 40 Wiley · 35 Others)
             </p>
           </div>
 
@@ -187,10 +187,10 @@ export const Hero: React.FC = () => {
               <span className="text-[11px] font-semibold text-slate-500 uppercase tracking-wider">Mentorship</span>
             </div>
             <div className="text-2xl sm:text-3xl font-serif font-bold text-slate-900 dark:text-white">
-              {PROFESSOR_INFO.phdSupervised}+
+              {PROFESSOR_INFO.phdSupervised} (+{PROFESSOR_INFO.collaborativePhd})
             </div>
             <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">
-              Ph.D. Scholars Supervised (Holding faculty & R&D posts globally)
+              Ph.D. Degrees Awarded (37 Supervised + 1 Collaborative)
             </p>
           </div>
 
@@ -213,10 +213,10 @@ export const Hero: React.FC = () => {
               <span className="text-[11px] font-semibold text-slate-500 uppercase tracking-wider">Treatises</span>
             </div>
             <div className="text-2xl sm:text-3xl font-serif font-bold text-slate-900 dark:text-white">
-              1 Book + 5
+              2 Books + 5
             </div>
             <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">
-              RSC Textbook + 5 Book Chapters (CRC, Wiley, Springer)
+              2 RSC Textbooks + 5 Book Chapters (CRC, Wiley, Springer)
             </p>
           </div>
         </div>
