@@ -9,6 +9,11 @@ export interface BookItem {
   year: number;
   details: string;
   isbnOrDoi?: string;
+  coverImage?: string;
+  doiUrl?: string;
+  rscUrl?: string;
+  series?: string;
+  isbn?: string;
 }
 
 export interface PopularArticle {
@@ -63,7 +68,7 @@ const getBaseUrl = () => {
 export const PROFESSOR_INFO = {
   name: 'Prof. Arun Kumar Nandi',
   fullName: 'Prof. Arun Kumar Nandi, FASc., FRSC',
-  portraitUrl: `${getBaseUrl()}assets/aistudio/ak_nandi_820358dd.png`,
+  portraitUrl: `${getBaseUrl()}assets/aistudio/IMG_1631_8281ab90.JPG`,
   designation: 'Emeritus Scientist, CSIR',
   formerRole: 'Senior Professor & Head (Former)',
   unit: 'Polymer Science Unit, School of Materials Science',
@@ -386,8 +391,13 @@ export const BOOKS_AND_CHAPTERS: BookItem[] = [
     authors: 'Prof. Arun Kumar Nandi',
     publisher: 'Royal Society of Chemistry (RSC), London, UK',
     year: 2021,
-    details: 'Polymer Chemistry Series, Volume 35, 340 pages. Authoritative monograph covering covalent and non-covalent functionalization routes, self-assembly, electrical conductivity, and energy storage.',
-    isbnOrDoi: 'ISBN: 978-1-78801-879-1 | DOI: 10.1039/9781788019675'
+    series: 'Polymer Chemistry Series, Volume 35',
+    details: 'Authoritative 340-page monograph covering covalent and non-covalent functionalization routes, ATRP grafting, exfoliated nanocomposites, self-assembly, electrical conductivity, and energy storage technologies.',
+    isbnOrDoi: 'ISBN: 978-1-78801-879-1 | DOI: 10.1039/9781788019675',
+    isbn: '978-1-78801-879-1',
+    coverImage: `${getBaseUrl()}assets/aistudio/m_cover_fe65fbe5.jpeg`,
+    doiUrl: 'https://doi.org/10.1039/9781788019675',
+    rscUrl: 'https://books.rsc.org/books/monograph/885/Polymer-Functionalized-Graphene'
   },
   {
     id: 2,
@@ -396,8 +406,13 @@ export const BOOKS_AND_CHAPTERS: BookItem[] = [
     authors: 'Prof. Arun Kumar Nandi',
     publisher: 'Royal Society of Chemistry (RSC), London, UK',
     year: 2024,
-    details: 'Polymer Chemistry Series No. 47. Comprehensive reference textbook detailing physical and chemical crosslinking, thermoreversible supramolecular networks, functional hydrogels and organogels, stimuli-responsive behavior, and advanced biomedical and optoelectronic applications.',
-    isbnOrDoi: 'Hardback ISBN: 978-1-83767-420-6 | EPUB ISBN: 978-1-83767-853-2 | DOI: 10.1039/9781837678525'
+    series: 'Polymer Chemistry Series No. 47',
+    details: 'Comprehensive reference treatise detailing physical and chemical crosslinking, thermoreversible supramolecular networks, functional hydrogels and organogels, stimuli-responsive behavior, and advanced biomedical and optoelectronic applications.',
+    isbnOrDoi: 'Hardback ISBN: 978-1-83767-420-6 | EPUB ISBN: 978-1-83767-853-2 | DOI: 10.1039/9781837678525',
+    isbn: '978-1-83767-420-6',
+    coverImage: `${getBaseUrl()}assets/aistudio/m_9781837674206_d419e444.jpeg`,
+    doiUrl: 'https://doi.org/10.1039/9781837678525',
+    rscUrl: 'https://books.rsc.org/books/monograph/2564/Polymer-and-Supramolecular-Gels'
   },
   {
     id: 3,
@@ -450,6 +465,8 @@ export const BOOKS_AND_CHAPTERS: BookItem[] = [
     isbnOrDoi: 'ISBN: 978-1-4398-2779-6'
   }
 ];
+
+export const FEATURED_BOOKS: BookItem[] = BOOKS_AND_CHAPTERS.filter(b => b.type === 'Textbook');
 
 export const POPULAR_ARTICLES: PopularArticle[] = [
   {

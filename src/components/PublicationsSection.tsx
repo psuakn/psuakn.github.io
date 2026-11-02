@@ -442,43 +442,94 @@ export const PublicationsSection: React.FC = () => {
               {BOOKS_AND_CHAPTERS.map((book) => (
                 <div
                   key={book.id}
-                  className="p-6 rounded-xl bg-slate-50/70 dark:bg-slate-800/40 border border-slate-200/90 dark:border-slate-800 space-y-3 flex flex-col justify-between"
+                  className={`p-6 rounded-xl bg-slate-50/70 dark:bg-slate-800/40 border border-slate-200/90 dark:border-slate-800 flex flex-col justify-between ${
+                    book.coverImage ? 'sm:flex-row gap-5 items-start' : 'space-y-3'
+                  }`}
                 >
-                  <div className="space-y-2">
-                    <div className="flex items-center gap-2">
-                      <span className={`text-[10px] uppercase font-bold px-2 py-0.5 rounded ${
-                        book.type === 'Textbook' 
-                          ? 'bg-indigo-600 text-white' 
-                          : 'bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300'
-                      }`}>
-                        {book.type}
-                      </span>
-                      <span className="text-xs font-mono font-semibold text-slate-500 dark:text-slate-400">
-                        {book.year}
-                      </span>
+                  {/* Optional Book Cover Thumbnail */}
+                  {book.coverImage && (
+                    <div className="shrink-0 mx-auto sm:mx-0 w-32 sm:w-36">
+                      <div className="relative rounded-r-md rounded-l-xs overflow-hidden shadow-md border border-slate-200/80 dark:border-slate-700/80 bg-slate-100 dark:bg-slate-800">
+                        <img
+                          src={book.coverImage}
+                          alt={`Book Cover: ${book.title}`}
+                          className="w-full h-auto aspect-[1/1.48] object-cover"
+                          loading="lazy"
+                        />
+                        <div className="absolute inset-y-0 left-0 w-2.5 bg-gradient-to-r from-black/25 via-black/10 to-transparent pointer-events-none" />
+                      </div>
+                    </div>
+                  )}
+
+                  <div className="flex-1 flex flex-col justify-between h-full space-y-3">
+                    <div className="space-y-2">
+                      <div className="flex flex-wrap items-center gap-2">
+                        <span className={`text-[10px] uppercase font-bold px-2 py-0.5 rounded ${
+                          book.type === 'Textbook' 
+                            ? 'bg-indigo-600 text-white' 
+                            : 'bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300'
+                        }`}>
+                          {book.type}
+                        </span>
+                        <span className="text-xs font-mono font-semibold text-slate-500 dark:text-slate-400">
+                          {book.year}
+                        </span>
+                        {book.series && (
+                          <span className="text-[11px] text-slate-500 dark:text-slate-400">
+                            · {book.series}
+                          </span>
+                        )}
+                      </div>
+
+                      <h3 className="text-base sm:text-lg font-serif font-bold text-slate-900 dark:text-white leading-snug">
+                        {book.title}
+                      </h3>
+
+                      <p className="text-xs text-slate-600 dark:text-slate-300 font-medium">
+                        {book.authors}
+                      </p>
+
+                      <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+                        {book.details}
+                      </p>
                     </div>
 
-                    <h3 className="text-base sm:text-lg font-serif font-bold text-slate-900 dark:text-white leading-snug">
-                      {book.title}
-                    </h3>
-
-                    <p className="text-xs text-slate-600 dark:text-slate-300 font-medium">
-                      {book.authors}
-                    </p>
-
-                    <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
-                      {book.details}
-                    </p>
-                  </div>
-
-                  <div className="pt-3 border-t border-slate-200 dark:border-slate-700/60 flex flex-wrap items-center justify-between gap-2 text-xs">
-                    <span className="font-mono text-[11px] text-slate-500 dark:text-slate-400">
-                      {book.publisher}
-                    </span>
-                    {book.isbnOrDoi && (
-                      <span className="font-mono text-[10px] text-indigo-700 dark:text-indigo-400 break-all">
-                        {book.isbnOrDoi}
+                    <div className="pt-3 border-t border-slate-200 dark:border-slate-700/60 flex flex-wrap items-center justify-between gap-2 text-xs">
+                      <span className="font-mono text-[11px] text-slate-500 dark:text-slate-400">
+                        {book.publisher}
                       </span>
+                      {book.isbnOrDoi && (
+                        <span className="font-mono text-[10px] text-indigo-700 dark:text-indigo-400 break-all">
+                          {book.isbnOrDoi}
+                        </span>
+                      )}
+                    </div>
+
+                    {(book.rscUrl || book.doiUrl) && (
+                      <div className="pt-2 flex flex-wrap items-center gap-2">
+                        {book.rscUrl && (
+                          <a
+                            href={book.rscUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-indigo-600 hover:bg-indigo-700 text-white text-[11px] font-medium transition-colors"
+                          >
+                            <span>RSC Books</span>
+                            <ExternalLink className="w-3 h-3" />
+                          </a>
+                        )}
+                        {book.doiUrl && (
+                          <a
+                            href={book.doiUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-slate-200 dark:bg-slate-700 hover:bg-slate-300 dark:hover:bg-slate-600 text-slate-700 dark:text-slate-200 text-[11px] font-medium transition-colors"
+                          >
+                            <span>DOI Link</span>
+                            <ExternalLink className="w-3 h-3" />
+                          </a>
+                        )}
+                      </div>
                     )}
                   </div>
                 </div>
