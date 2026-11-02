@@ -68,7 +68,7 @@ const getBaseUrl = () => {
 export const PROFESSOR_INFO = {
   name: 'Prof. Arun Kumar Nandi',
   fullName: 'Prof. Arun Kumar Nandi, FASc., FRSC',
-  portraitUrl: `${getBaseUrl()}assets/aistudio/IMG_1631_8281ab90.JPG`,
+  portraitUrl: `${getBaseUrl()}assets/aistudio/Older_Man_in_Light_Yellow_Shirt_94621cd7.png`,
   designation: 'Emeritus Scientist, CSIR',
   formerRole: 'Senior Professor & Head (Former)',
   unit: 'Polymer Science Unit, School of Materials Science',
@@ -95,7 +95,7 @@ export const PROFESSOR_INFO = {
     { title: 'FWAST', name: 'West Bengal Academy of Science and Technology', year: '2006' }
   ],
   bioOverview: `Prof. Arun Kumar Nandi, FASc, FRSC, is an internationally acclaimed polymer scientist and Emeritus Scientist (CSIR) at the Indian Association for the Cultivation of Science (IACS), Kolkata. Over four decades of groundbreaking research, Prof. Nandi has pioneered foundational concepts in polymer crystallization, thermoreversible supramolecular gelation, polymer-functionalized graphene, biomolecular hybrids, and organic mixed ion-electron conductors for energy storage and optoelectronics.`,
-  bioDetail: `With over 268 research papers in top-tier journals (including 91 ACS, 59 RSC, 41 Elsevier, and 40 Wiley publications), an h-index of 61, author of two Royal Society of Chemistry reference textbooks on "Polymer Functionalized Graphene" (2021) and "Polymer and Supramolecular Gels" (2024), and having mentored 37 Ph.D. scholars (+1 collaborative) who currently hold faculty and scientific leadership posts globally, Prof. Nandi has shaped the trajectory of macromolecular chemistry in India and abroad. His postdoctoral work at Florida State University alongside legendary polymer physicist Prof. Leo Mandelkern established critical insights into polymer equilibrium melting and defect distributions. He later pioneered "nanojacketing" of DNA, smart thixotropic photoluminescent gels, piezoelectric β-PVDF polymorph nanocomposites, and high-efficiency hybrid supercapacitors.`
+  bioDetail: `With over 268 research papers in top-tier journals (including 91 ACS, 59 RSC, 41 Elsevier, and 40 Wiley publications), an h-index of 61, author of two Royal Society of Chemistry reference textbooks on "Polymer Functionalized Graphene" (2021) and "Polymer and Supramolecular Gels" (2026), and having mentored 37 Ph.D. scholars (+1 collaborative) who currently hold faculty and scientific leadership posts globally, Prof. Nandi has shaped the trajectory of macromolecular chemistry in India and abroad. His postdoctoral work at Florida State University alongside legendary polymer physicist Prof. Leo Mandelkern established critical insights into polymer equilibrium melting and defect distributions. He later pioneered "nanojacketing" of DNA, smart thixotropic photoluminescent gels, piezoelectric β-PVDF polymorph nanocomposites, and high-efficiency hybrid supercapacitors.`
 };
 
 export const EDUCATION_LIST = [
@@ -405,7 +405,7 @@ export const BOOKS_AND_CHAPTERS: BookItem[] = [
     title: 'Polymer and Supramolecular Gels',
     authors: 'Prof. Arun Kumar Nandi',
     publisher: 'Royal Society of Chemistry (RSC), London, UK',
-    year: 2024,
+    year: 2026,
     series: 'Polymer Chemistry Series No. 47',
     details: 'Comprehensive reference treatise detailing physical and chemical crosslinking, thermoreversible supramolecular networks, functional hydrogels and organogels, stimuli-responsive behavior, and advanced biomedical and optoelectronic applications.',
     isbnOrDoi: 'Hardback ISBN: 978-1-83767-420-6 | EPUB ISBN: 978-1-83767-853-2 | DOI: 10.1039/9781837678525',

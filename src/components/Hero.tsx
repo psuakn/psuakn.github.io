@@ -158,7 +158,7 @@ export const Hero: React.FC = () => {
                 <div className="flex items-start gap-2.5 text-xs text-slate-600 dark:text-slate-300">
                   <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
                   <span>
-                    <strong>Author of Two RSC Reference Textbooks</strong> on "Polymer Functionalized Graphene" (2021) and "Polymer and Supramolecular Gels" (2024).
+                    <strong>Author of Two RSC Reference Textbooks</strong> on "Polymer Functionalized Graphene" (2021) and "Polymer and Supramolecular Gels" (2026).
                   </span>
                 </div>
               </div>
